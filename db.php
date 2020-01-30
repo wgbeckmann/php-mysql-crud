@@ -2,10 +2,10 @@
 session_start();
 
 $conn = mysqli_connect(
-  'mysql',
-  'testuser',
-  'testpassword',
-  'testdatabase'
+  getenv('DBSERVER'),
+  getenv('DBUSER'),
+  getenv('DBPASSWORD'),
+  getenv('DBNAME')
 ) or die(mysqli_erro($mysqli));
 
 ?>
